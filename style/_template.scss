@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+$colornav: #333333;
+$colorsearch: #3d348b;
+$colorservices: #5db7de;
+$colorwhite: white;
+$colora: #3d348b;
+@mixin sans($fontsize, $lineheight, $fontweight) {
+  font-family: "PT Sans", sans-serif;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  font-weight: $fontweight;
+}

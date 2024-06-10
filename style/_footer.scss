@@ -1,0 +1,105 @@
+footer {
+  .footer {
+    background-color: #3d348b85;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0;
+
+      .adress {
+        @media (max-width: 1024px) {
+          display: none;
+        }
+        p {
+          @include sans(16px, 22px, 700);
+          color: $colorwhite;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          &::before {
+            content: url("../image/footer1.svg");
+            display: block;
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+      .phone {
+        display: flex;
+        @include sans(16px, 22px, 700);
+        color: $colorwhite;
+        gap: 30px;
+        p {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          &::before {
+            content: url(../image/phone.svg);
+            display: block;
+            width: 30px;
+            height: 30px;
+          }
+        }
+        span {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          @media (max-width: 600px) {
+            display: none;
+          }
+          &::before {
+            content: url(../image/mail.svg);
+            display: block;
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+  .subfooter {
+    background-color: #3d348b;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 80px;
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .links {
+        padding-top: 80px;
+        p {
+          @include sans(16px, 22px, 700);
+          color: $colorwhite;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+        }
+        span {
+          @include sans(14px, 19px, 400);
+          display: block;
+          color: $colorwhite;
+          margin-bottom: 20px;
+        }
+        a {
+          @include sans(14px, 19px, 400);
+          display: block;
+          color: $colorwhite;
+          margin-bottom: 20px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    @include sans(13px, 18px, 700);
+    letter-spacing: 2px;
+    color: $colorwhite;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+  }
+}
